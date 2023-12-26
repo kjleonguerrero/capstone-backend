@@ -11,7 +11,7 @@ class ExercisesControllerTest < ActionDispatch::IntegrationTest
 
   test "create" do
     assert_difference "Exercise.count", 1 do
-      post "/exercises.json", params: { title: "test", description: "test", image_url: "test.jpg", video_url: "test.mp4", routine_id: 1 }
+      post "/exercises.json", params: { title: "test", description: "test", image_url: "test.jpg", video_url: "test.mp4", routine_id: Routine.first.id }
       assert_response 200
     end
   end
