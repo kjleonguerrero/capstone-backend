@@ -1,8 +1,8 @@
-# user = User.create(name: "Kyle Leon Guerrero", email: "kyle@example.com", password: "password", password_confirmation: "password")
+# user = User.create(name: "Kyle Leon Guerrero", email: "kyle@example.com", password: "password", password_confirmation: "password", admin: true)
 
-# user = User.create(name: "Dashton Leon Guerrero", email: "dash@example.com", password: "password", password_confirmation: "password")
+# user = User.create(name: "Dashton Leon Guerrero", email: "dash@example.com", password: "password", password_confirmation: "password", admin: false)
 
-# user = User.create(name: "Tessa Leon Guerrero", email: "tessa@example.com", password: "password", password_confirmation: "password")
+# user = User.create(name: "Tessa Leon Guerrero", email: "tessa@example.com", password: "password", password_confirmation: "password", admin: false)
 
 exercise = Exercise.create!(title: "Pushup", description: "Contract your abs and tighten your core by pulling your belly button toward your spine. Inhale as you slowly bend your elbows and lower yourself to the floor, until your elbows are at a 90-degree angle. Exhale while contracting your chest muscles and pushing back up through your hands, returning to the start position.", image_url: "https://cdn.pixabay.com/photo/2016/09/21/23/59/sport-1686063_640.jpg", video_url: "https://youtu.be/k2YnU7UFAaE", routine_id: 1)
 
