@@ -17,10 +17,10 @@ class ExercisesController < ApplicationController
       video_url: params[:video_url],
       routine_id: params[:routine_id],
     )
-    if @product.valid? #happy path
+    if @exercise.save #happy path
       render :show
     else #sad path
-      render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
+      render json: { errors: @exercise.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
@@ -32,10 +32,10 @@ class ExercisesController < ApplicationController
       image_url: params[:image_url] || @exercise.image_url,
       video_url: params[:video_url] || @exercise.video_url,
     )
-    if @product.valid? #happy path
+    if @exercise.save #happy path
       render :show
     else #sad path
-      render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
+      render json: { errors: @exercise.errors.full_messages }, status: :unprocessable_entity
     end
   end
 

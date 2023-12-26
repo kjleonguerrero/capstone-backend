@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   delete "/exercises/:id" => "exercises#destroy"
 
   get "/routines" => "routines#index"
+  post "/routines" => "routines#create"
+  delete "/routines/:id" => "routines#destroy"
 end
