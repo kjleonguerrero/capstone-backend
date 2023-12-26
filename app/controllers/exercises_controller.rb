@@ -17,7 +17,11 @@ class ExercisesController < ApplicationController
       video_url: params[:video_url],
       routine_id: params[:routine_id],
     )
-    render :show
+    if @product.valid? #happy path
+      render :show
+    else #sad path
+      render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def update
@@ -28,7 +32,11 @@ class ExercisesController < ApplicationController
       image_url: params[:image_url] || @exercise.image_url,
       video_url: params[:video_url] || @exercise.video_url,
     )
-    render :show
+    if @product.valid? #happy path
+      render :show
+    else #sad path
+      render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def destroy
